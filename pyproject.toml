@@ -1,0 +1,23 @@
+[project]
+name = "mcp-library"
+version = "1.0.0"
+description = "Educational MCP server for book library management"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.9.0,<2.0.0",
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.5.0",
+    "ollama>=0.1.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
