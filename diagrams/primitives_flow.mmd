@@ -1,0 +1,52 @@
+sequenceDiagram
+    participant User
+    participant Host as Ollama Host
+    participant LLM as Llama3
+    participant MCP as MCP Server
+    participant Data as Data Files
+
+    Note over User,Data: Example: User asks for book recommendations
+
+    User->>Host: "Recommend me a fantasy book"
+
+    Host->>MCP: list_tools() & list_prompts()
+    MCP-->>Host: Available capabilities
+
+    Host->>LLM: User query + System context with tools/prompts
+
+    Note over LLM: LLM decides to use recommend_books prompt
+
+    LLM-->>Host: {"action": "prompt", "prompt_name": "recommend_books", "arguments": {"genre": "Fantasy"}}
+
+    Host->>MCP: get_prompt("recommend_books", {genre: "Fantasy"})
+    MCP->>Data: Read books.json + reading_list.json
+    Data-->>MCP: Data loaded
+    MCP-->>Host: Rendered prompt template with injected data
+
+    Host->>LLM: Template with book catalog + user stats
+
+    Note over LLM: LLM processes full context
+
+    LLM-->>Host: "Based on your love of sci-fi, I recommend: 1. The Fellowship of the Ring..."
+
+    Host-->>User: Final recommendation
+
+    Note over User,Data: Example: User wants to search for mysteries
+
+    User->>Host: "Find mystery books with rating > 4.5"
+
+    Host->>LLM: Query + Available tools
+
+    Note over LLM: LLM decides to use search_books tool
+
+    LLM-->>Host: {"action": "tool", "tool_name": "search_books", "arguments": {"query": "mystery", "min_rating": 4.5}}
+
+    Host->>MCP: call_tool("search_books", {...})
+    MCP->>Data: Search books.json
+    Data-->>MCP: Matching books
+    MCP-->>Host: Search results
+
+    Host->>LLM: Tool results
+    LLM-->>Host: "I found 2 mystery books above 4.5 rating: The Adventures of Sherlock Holmes..."
+
+    Host-->>User: Formatted results

@@ -1,0 +1,61 @@
+graph TB
+    subgraph "Client Layer"
+        OllamaHost[Ollama Host<br/>run_ollama.py]
+        ExampleClient[Example Client<br/>example_usage.py]
+        Inspector[MCP Inspector<br/>npm tool]
+    end
+
+    subgraph "Transport Layer"
+        STDIO[STDIO Transport<br/>stdin/stdout]
+        HTTP[HTTP Transport<br/>POST /mcp]
+    end
+
+    subgraph "MCP Server"
+        Registry[Central Registry<br/>registry.py]
+
+        subgraph Resources
+            BookCatalog[Book Catalog<br/>library://books/catalog]
+            ReadingStats[Reading Stats<br/>library://user/reading-stats]
+        end
+
+        subgraph Prompts
+            RecommendBooks[Recommend Books<br/>recommend_books]
+            ProgressReport[Progress Report<br/>reading_progress_report]
+            BookReview[Book Review<br/>create_book_review]
+        end
+
+        subgraph Tools
+            SearchBooks[Search Books<br/>search_books]
+            AddToList[Add to Reading List<br/>add_to_reading_list]
+        end
+    end
+
+    subgraph "Data Layer"
+        BooksJSON[books.json<br/>10+ books]
+        ReadingJSON[reading_list.json<br/>user data]
+    end
+
+    OllamaHost -->|JSON-RPC| STDIO
+    ExampleClient -->|JSON-RPC| STDIO
+    Inspector -->|JSON-RPC| STDIO
+
+    STDIO --> Registry
+    HTTP --> Registry
+
+    Registry --> Resources
+    Registry --> Prompts
+    Registry --> Tools
+
+    Resources -.reads.-> BooksJSON
+    Resources -.reads.-> ReadingJSON
+    Tools -.modifies.-> ReadingJSON
+    Prompts -.reads.-> BooksJSON
+    Prompts -.reads.-> ReadingJSON
+
+    style OllamaHost fill:#00ff
+    style Registry fill:#fff3
+    style Resources fill:#f3e5f5
+    style Prompts fill:#e8f5e9
+    style Tools fill:#fce4ec
+    style BooksJSON fill:#ffc4
+    style ReadingJSON fill:#ffc4
