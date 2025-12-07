@@ -1,0 +1,17 @@
+# MCP Library Host Configuration
+
+ollama:
+  host: http://localhost:11434
+  model: llama3
+  timeout: 120
+
+server:
+  type: stdio  # or http
+  path: server/stdio_server.py
+  http_url: http://localhost:8000/mcp  # if type is http
+
+agent:
+  max_iterations: 50
+  system_prompt: |
+    You are a helpful library assistant with access to a book catalog and reading tools.
+    Use the available tools and resources to help users find books and manage their reading list.
