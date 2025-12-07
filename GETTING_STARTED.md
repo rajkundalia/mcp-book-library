@@ -124,7 +124,7 @@ This opens a web interface (usually http://localhost:5173).
 4. Click **"Call Tool"**
 5. See search results!
 
-## Step 6: Understand the Code (15 minutes)
+## Step 6: Understand the Code 
 
 ### Resources (server/resources/)
 
@@ -167,7 +167,7 @@ def add_to_reading_list(book_id):
 
 **Key concept**: Tools EXECUTE and can MODIFY data.
 
-## Step 7: How LLM Routing Works (10 minutes)
+## Step 7: How LLM Routing Works 
 
 Open `host/run_ollama.py` and follow the flow:
 
@@ -202,7 +202,7 @@ while iteration < max_iterations:
 **Key concept**: NO `if user_input.contains("search")` logic!
 The LLM reads tool descriptions and decides what to use.
 
-## Step 8: Run Tests (5 minutes)
+## Step 8: Run Tests 
 
 ```bash
 # Run all tests
@@ -221,7 +221,7 @@ Tests verify:
 - Tools execute and persist data
 - Search filters work correctly
 
-## Step 9: Experiment! (∞ minutes)
+## Step 9: Experiment! 
 
 ### Add a New Book
 

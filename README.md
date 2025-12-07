@@ -2,7 +2,7 @@
 
 An educational Model Context Protocol (MCP) server demonstrating **Resources**, **Prompts**, and **Tools** with dual transport support (STDIO + HTTP) and Ollama integration.
 
-## 🎯 What You'll Learn
+## What You'll Learn
 
 This project demonstrates:
 
@@ -13,13 +13,13 @@ This project demonstrates:
 - ✅ **HTTP Transport**: RESTful JSON-RPC endpoint
 - ✅ **True LLM Routing**: Ollama-based host where the AI decides which tools/prompts to use
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.10 or higher
 - [Ollama](https://ollama.ai/) installed and running
 - Node.js (for MCP Inspector, optional)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Installation
 
@@ -64,7 +64,7 @@ Assistant: [Uses recommend_books prompt with your stats]
 Based on your favorite genres (Science Fiction, Fantasy, Mystery)...
 ```
 
-## 🧪 Testing with MCP Inspector
+## Testing with MCP Inspector
 
 The MCP Inspector lets you test primitives without writing code:
 
@@ -83,7 +83,7 @@ Opens a web UI where you can:
 
 See [client/inspector_guide.md](client/inspector_guide.md) for detailed instructions.
 
-## 📚 Understanding MCP Primitives
+## Understanding MCP Primitives
 
 ### Resources (Read-Only Data)
 
@@ -161,7 +161,7 @@ call_tool("add_to_reading_list", {
 └─────────────────┘
 ```
 
-## 🎓 How the LLM Routing Works
+## How the LLM Routing Works
 
 Unlike traditional chatbots with `if/else` logic, this host uses **true AI routing**:
 
@@ -181,7 +181,7 @@ Llama3 thinks:
   → Respond to user
 ```
 
-## 🏃 Running Different Components
+## Running Different Components
 
 ### STDIO Server (for Inspector/Clients)
 ```bash
@@ -192,6 +192,8 @@ python server/stdio_server.py
 ```bash
 python server/http_server.py
 # Server runs on http://localhost:8000
+
+# read more about testing this on inspector_guide.md file
 ```
 
 ### Example Client (Demonstrates all primitives)
@@ -204,7 +206,7 @@ python client/example_usage.py
 pytest tests/ -v
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 mcp-library/
@@ -226,7 +228,7 @@ mcp-library/
 └── diagrams/                  # Architecture diagrams
 ```
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### Ollama Connection Error
 ```
@@ -254,21 +256,13 @@ ls server/data/books.json
 ls server/data/reading_list.json
 ```
 
-## 🎯 Next Steps
-
-1. **Extend the catalog**: Add more books to `server/data/books.json`
-2. **Create new tools**: Add book rating, review tools
-3. **Build custom prompts**: Create genre-specific recommendation templates
-4. **Add new resources**: Track reading speed, book notes
-5. **Connect to real APIs**: Replace JSON files with actual database or book APIs
-
-## 📖 Learn More
+## Learn More
 
 - [MCP Documentation](https://modelcontextprotocol.io/)
 - [Ollama Documentation](https://ollama.ai/)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 
-## 📜 License
+## License
 
 MIT License - Feel free to use this for learning and building!
 

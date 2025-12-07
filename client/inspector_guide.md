@@ -88,6 +88,29 @@ The Inspector works with STDIO by default. To test the HTTP server:
        "method": "tools/list",
        "params": {}
      }'
+   
+
+    curl -X POST http://localhost:8000/mcp \
+      -H "Content-Type: application/json" \
+      -d '{
+        "jsonrpc": "2.0",
+        "id": 2,
+        "method": "tools/call",
+        "params": {
+          "name": "search_books",
+          "arguments": {"query": "science fiction"}
+        }
+      }'
+
+
+    curl -X POST http://localhost:8000/mcp \
+      -H "Content-Type: application/json" \
+      -d '{
+        "jsonrpc": "2.0",
+        "id": 3,
+        "method": "resources/list",
+        "params": {}
+      }'
    ```
 
 ## Next Steps

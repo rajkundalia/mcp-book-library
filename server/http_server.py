@@ -7,7 +7,7 @@ import json
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import JSONResponse
 
-from server.registry import MCPRegistry
+from registry import MCPRegistry
 
 app = FastAPI(title="MCP Library HTTP Server")
 registry = MCPRegistry()
