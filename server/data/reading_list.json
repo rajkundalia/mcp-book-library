@@ -1,0 +1,22 @@
+{
+  "total_books_read": 15,
+  "current_year_count": 8,
+  "favorite_genres": ["Science Fiction", "Fantasy", "Mystery"],
+  "reading_list": ["dune", "fellowship-ring"],
+  "recently_read": [
+    {
+      "book_id": "1984",
+      "date_finished": "2024-11-15",
+      "user_rating": 5
+    },
+    {
+      "book_id": "mockingbird",
+      "date_finished": "2024-10-28",
+      "user_rating": 5
+    }
+  ],
+  "reading_goal": {
+    "yearly_target": 24,
+    "current_progress": 8
+  }
+}

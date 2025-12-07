@@ -1,0 +1,102 @@
+[
+  {
+    "id": "dune",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "year": 1965,
+    "genre": "Science Fiction",
+    "pages": 688,
+    "rating": 4.5,
+    "summary": "A science fiction epic about politics, religion, and ecology on the desert planet Arrakis."
+  },
+  {
+    "id": "1984",
+    "title": "1984",
+    "author": "George Orwell",
+    "year": 1949,
+    "genre": "Dystopian Fiction",
+    "pages": 328,
+    "rating": 4.7,
+    "summary": "A dystopian novel about totalitarianism and surveillance."
+  },
+  {
+    "id": "fellowship-ring",
+    "title": "The Fellowship of the Ring",
+    "author": "J.R.R. Tolkien",
+    "year": 1954,
+    "genre": "Fantasy",
+    "pages": 423,
+    "rating": 4.8,
+    "summary": "The first volume of The Lord of the Rings, following Frodo's journey to destroy the One Ring."
+  },
+  {
+    "id": "pride-prejudice",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "year": 1813,
+    "genre": "Romance",
+    "pages": 432,
+    "rating": 4.6,
+    "summary": "A romantic novel of manners about Elizabeth Bennet and Mr. Darcy."
+  },
+  {
+    "id": "great-gatsby",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "year": 1925,
+    "genre": "Literary Fiction",
+    "pages": 180,
+    "rating": 4.4,
+    "summary": "A portrait of the Jazz Age in all of its decadence and excess."
+  },
+  {
+    "id": "mockingbird",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "year": 1960,
+    "genre": "Literary Fiction",
+    "pages": 324,
+    "rating": 4.8,
+    "summary": "A gripping tale of racial injustice and childhood innocence in Depression-era Alabama."
+  },
+  {
+    "id": "hobbit",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "year": 1937,
+    "genre": "Fantasy",
+    "pages": 310,
+    "rating": 4.7,
+    "summary": "Bilbo Baggins's unexpected journey with dwarves to reclaim their mountain home."
+  },
+  {
+    "id": "sherlock",
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "year": 1892,
+    "genre": "Mystery",
+    "pages": 307,
+    "rating": 4.6,
+    "summary": "A collection of twelve detective stories featuring the iconic Sherlock Holmes."
+  },
+  {
+    "id": "brave-new-world",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "year": 1932,
+    "genre": "Dystopian Fiction",
+    "pages": 311,
+    "rating": 4.3,
+    "summary": "A dystopian vision of a technologically advanced future where humans are genetically bred."
+  },
+  {
+    "id": "catcher-rye",
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "year": 1951,
+    "genre": "Literary Fiction",
+    "pages": 277,
+    "rating": 4.0,
+    "summary": "Holden Caulfield's journey through New York City after being expelled from prep school."
+  }
+]
