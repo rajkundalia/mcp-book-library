@@ -31,12 +31,15 @@ class MCPRegistry:
     @staticmethod
     def read_resource(uri: str) -> dict[str, Any]:
         """Read a specific resource by URI."""
-        if uri == "library://books/catalog":
+        # Convert to string if it's an AnyUrl object
+        uri_str = str(uri)
+
+        if uri_str == "library://books/catalog":
             return get_book_catalog()
-        elif uri == "library://user/reading-stats":
+        elif uri_str == "library://user/reading-stats":
             return get_reading_stats()
         else:
-            raise ValueError(f"Unknown resource URI: {uri}")
+            raise ValueError(f"Unknown resource URI: {uri_str}")
 
     @staticmethod
     def list_prompts() -> list[dict[str, Any]]:

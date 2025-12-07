@@ -1,8 +1,16 @@
 {
   "total_books_read": 15,
   "current_year_count": 8,
-  "favorite_genres": ["Science Fiction", "Fantasy", "Mystery"],
-  "reading_list": ["dune", "fellowship-ring"],
+  "favorite_genres": [
+    "Science Fiction",
+    "Fantasy",
+    "Mystery"
+  ],
+  "reading_list": [
+    "dune",
+    "fellowship-ring",
+    "1984"
+  ],
   "recently_read": [
     {
       "book_id": "1984",

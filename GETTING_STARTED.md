@@ -90,6 +90,8 @@ npm install -g @modelcontextprotocol/inspector
 mcp-inspector python server/stdio_server.py
 ```
 
+![img.png](img.png)
+
 This opens a web interface (usually http://localhost:5173).
 
 ### Test Resources
