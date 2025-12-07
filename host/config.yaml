@@ -1,14 +1,15 @@
 # MCP Library Host Configuration
 
-ollama:
-  host: http://localhost:11434
-  model: llama3
-  timeout: 120
-
+# Server configuration
 server:
-  type: stdio  # or http
-  path: server/stdio_server.py
-  http_url: http://localhost:8000/mcp  # if type is http
+  transport: "stdio"
+  path: "server/stdio_server.py"
+
+# Ollama configuration
+ollama:
+  model: "llama3"
+  temperature: 0.7
+  timeout: 30
 
 agent:
   max_iterations: 50

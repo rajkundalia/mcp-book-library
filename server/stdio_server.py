@@ -7,7 +7,7 @@ import json
 from mcp.server import Server
 from mcp.server.stdio import stdio_server
 from mcp.types import Resource, Prompt, Tool, TextContent
-from server.registry import MCPRegistry
+from registry import MCPRegistry
 
 # Create MCP server instance
 app = Server("mcp-library")

@@ -2,7 +2,7 @@
 
 This guide walks you through using the MCP Book Library from scratch.
 
-## Step 1: Environment Setup (5 minutes)
+## Step 1: Environment Setup
 
 ### Install Python Dependencies
 
@@ -28,16 +28,19 @@ pip install -r requirements.txt
    ollama pull llama3
    ```
 
-## Step 2: Verify Installation (2 minutes)
+## Step 2: Verify Installation 
 
 ```bash
 # Test that Ollama is running
 ollama list
 
 # Should show llama3 in the list
+
+#In case ollama does not start up
+ollama run llama3 --keepalive 60m 
 ```
 
-## Step 3: Run Your First MCP Server (1 minute)
+## Step 3: Run Your First MCP Server 
 
 ```bash
 # Start the STDIO server
@@ -47,14 +50,15 @@ python server/stdio_server.py
 You should see the server waiting for input (it communicates via stdin/stdout).
 Press `Ctrl+C` to stop.
 
-## Step 4: Use the Interactive Assistant (5 minutes)
+## Step 4: Use the Interactive Assistant 
 
 ```bash
 # Start the Ollama host
 python host/run_ollama.py
 ```
 
-Try these commands:
+Try these commands: 
+#### ***Note***: Please be patient, your laptop is generally not very fast in processing a locally running models.
 
 ```
 You: Hello
@@ -72,7 +76,7 @@ Assistant: [Uses add_to_reading_list tool]
 You: exit
 ```
 
-## Step 5: Explore with MCP Inspector (10 minutes)
+## Step 5: Explore with MCP Inspector 
 
 ### Install Inspector
 

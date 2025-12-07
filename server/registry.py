@@ -3,15 +3,15 @@ Central Registry for MCP Primitives
 Consolidates all resources, prompts, and tools to avoid code duplication
 """
 from typing import Any, Optional
-from server.resources.book_catalog import get_book_catalog, list_catalog_resource
-from server.resources.reading_stats import get_reading_stats, list_stats_resource
-from server.prompts.prompt_templates import (
+from resources.book_catalog import get_book_catalog, list_catalog_resource
+from resources.reading_stats import get_reading_stats, list_stats_resource
+from prompts.prompt_templates import (
     get_recommend_books_prompt,
     get_reading_progress_prompt,
     get_book_review_prompt,
     list_prompts as list_prompt_metadata
 )
-from server.tools.library_tools import search_books, add_to_reading_list, list_tools as list_tool_metadata
+from tools.library_tools import search_books, add_to_reading_list, list_tools as list_tool_metadata
 
 
 class MCPRegistry:
